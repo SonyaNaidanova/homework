@@ -1,0 +1,262 @@
+@font-face {
+font-family:"TT Lakes"; 
+src: url("font/TT Lakes/TT Lakes Neue Trial Regular.ttf") format("truetype");
+font-weight: 400;
+font-style: normal;
+}
+*{
+  box-sizing: border-box;
+}
+body{
+font-size: 14px;
+font-family:"TT Lakes", sans-serif;
+margin: 0;
+}
+.desctop-only{
+display: none !important;
+}
+.tablet-only{
+display: none !important;
+}
+
+.header__mobile{
+width: 320px;
+display: flex;
+justify-content:space-between;
+align-items: center;
+height: 88px;
+border-bottom: 1px solid #41F6D7;
+margin-bottom: 0;
+padding: 0 15px;
+}
+.header__logo{
+width: 96px;
+height: 60px;
+}
+.main{
+background-color: #f8f8f8;
+width: 320px;
+margin: 0;
+}
+.main__contents{
+display: flex; 
+justify-content:flex-start ; 
+gap: 10px;
+margin-bottom: 5px;
+}
+.main__conteiner--left{
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  gap: 10px;
+}
+.main__contents--text{
+ font-size: 28px; 
+}
+.main__nav{
+width: 320px;
+font-size: 16px;
+display: flex;
+column-gap: 5px;
+row-gap: 0;
+justify-content:flex-start ;
+align-items: center;
+white-space: nowrap;
+height: 40px;
+overflow-x: auto;
+overflow-y: hidden;
+box-sizing: border-box;
+
+scrollbar-width: none;
+
+-ms-overflow-style: none;
+}
+.main__nav::-webkit-scrollbar {
+display: none;
+}
+
+.main__nav--item{
+height: 40px;
+display: flex;
+justify-content:center ;
+align-items: center;
+padding: 0 10px;
+color: #7e7e82;
+margin:5px ;
+}
+.main__nav--item:nth-child(2){
+border: 2px solid #41F6D7;
+border-radius: 5px;
+background-color:#ffffff;
+box-sizing: border-box;
+padding: 0 20px;
+}
+
+.main__nav,.main__about{
+padding:0 15px;      
+}
+.main__nav{
+margin-bottom: 20px;  
+}
+.main__about{
+font-size: 14px;
+}
+.main__readmore{
+  display: flex;
+  gap: 5px;
+}
+.main__readmore--text{
+  font-size: 16px;
+  font-weight: 500;
+}
+.image__signboard{
+width:320px;
+}
+
+@media (min-width: 768px){
+.mobile--only{
+  display: none !important;
+}
+.tablet-only{
+display: flex !important;
+}
+
+.header{
+width: 768px;
+display: flex;
+justify-content:space-between;
+align-items: center;
+height: 88px;
+border-bottom: 1px solid #41F6D7;
+margin-bottom: 0;
+}
+.header__group{
+  display: flex;
+}
+.header__group--left{
+ justify-content:flex-start ;
+ gap: 15px;
+ padding-left: 20px;
+}
+.header__group--right{
+ justify-content: flex-end;
+ gap: 15px;
+ padding-right: 20px;
+}
+.main{
+  width: 768px;
+}
+.main__nav{
+ width: 768px;
+}
+ .main__nav--item:nth-child(4){
+  border: 2px solid #41F6D7;
+  border-radius: 5px;
+  background-color:#ffffff;
+  box-sizing: border-box;
+  padding: 0 20px;
+ }
+
+.main__section{
+  display: flex;
+
+}
+.image__signboard{
+ width: 360px;
+ border-radius: 5px;
+}
+}
+
+@media (min-width: 1120px){
+  .mobile--only{
+    display: none !important;
+  }
+  .tablet-only{
+    display: none !important;
+  }
+  .desctop-only{
+    display: flex !important;
+  }
+  .header{
+    display: none;
+  }
+  .main{
+  width: 1120px;
+  }
+  .main__contents{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .main__icon{
+    width: 40px;
+
+  }
+  .main__conteiner--left{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start ;
+  gap: 20px;
+  padding-left: 0;
+  width: 50%;
+  }
+  .main__conteiner--right{
+   justify-content: flex-end;
+   padding-right: 20px;
+   gap: 10px;
+   width: 50%;
+  }
+  .main__conteiner--right .main__icon--repair{
+    margin-right: 20px;
+  }
+  .main__nav{
+  width: 1120px;
+  align-items: start;
+  flex-wrap: wrap;
+  overflow: visible;
+  height: auto;
+  
+  }
+   .main__nav--item{
+    margin:5px ;
+    padding: 0 10px;
+   }
+ 
+  .main__nav--item:first-child{
+  border: 2px solid #41F6D7;
+  border-radius: 5px;
+  background-color:#ffffff;
+  box-sizing: border-box;
+  padding: 0 20px;
+
+  }
+  .main__section{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  min-width: 1120px;
+  align-items: stretch;
+  }
+  .main__about{
+    padding: 0;
+    max-width: 50%;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  .main__image{
+  width: 50%;
+  margin-right: 20px;
+  }
+ .image__signboard{
+  height: 307px;
+  width: 531.35px;
+  border-radius: 10px;
+  object-fit: cover;
+ }
+}
