@@ -1,0 +1,97 @@
+@font-face {
+font-family:"TT Lakes"; 
+src: url("font/TT Lakes/TT Lakes Neue Trial Regular.ttf") format("truetype");
+font-weight: 400;
+font-style: normal;
+}
+
+body{
+width: 320px;
+font-size: 14px;
+font-family:"TT Lakes", sans-serif;
+margin: 0;
+}
+
+.header__icon{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:20px;
+    gap: 20px;
+}
+
+.header__icon--search{
+   margin-left: auto; 
+   width: 40px;
+}
+
+.menu__list{
+  width:222px;
+  padding:0;
+  list-style:none;   
+}
+
+.menu__item{
+    display:block;
+    padding:15px 20px;
+    position: relative;
+    cursor: pointer;
+}
+.menu__item::before{
+    content: "";
+    position: absolute;
+
+    left: 0;              
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;               
+    height: 75%; 
+
+    background-color: #41f6d7;
+    border-radius: 0 5px 5px 0;
+
+    opacity:0;
+}
+.menu__item:hover {
+color: #7e7e82;
+}
+
+.menu__item:hover::before{
+    opacity:1;
+}
+
+
+
+.footer__icons{
+   display: flex;
+   justify-content:flex-start;
+   align-items: center;
+   padding:20px;
+   gap: 15px;
+   margin:0;
+}
+.footer__mail{   
+font-weight: 500;
+font-size: 16px;
+padding:0 0 0 20px;
+margin:0;
+}
+
+.footer__number{
+font-weight: 700;
+font-size: 24px;
+padding:0 0 0 20px;
+margin:15px 0 0 0;
+}
+.footer__lang-list{
+display: flex;
+justify-content:flex-start;
+align-items: center;
+padding:20px;
+gap: 15px;
+margin:0;
+list-style:none;  
+}
+.footer__lang-list li:hover{
+color: #7e7e82;
+}
