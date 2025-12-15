@@ -5,11 +5,32 @@ font-weight: 400;
 font-style: normal;
 }
 
-body{
-width: 320px;
-font-size: 14px;
-font-family:"TT Lakes", sans-serif;
-margin: 0;
+
+body {
+    width: 320px;
+    font-size: 14px;
+    font-family: "TT Lakes", sans-serif;
+    margin: 0;
+    position: relative; 
+    background-color: #fff; 
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 100px;   
+    height: 100%;
+    pointer-events: none; 
+    background: linear-gradient(to right, rgb(210, 210, 212), rgba(255, 255, 255, 0));
+}
+
+.menu__item,
+.header__icon img,
+.footer__icon,
+.footer__lang-item {
+  cursor: pointer;
 }
 
 .header__icon{
@@ -18,6 +39,10 @@ margin: 0;
     align-items: center;
     padding:20px;
     gap: 20px;
+}
+.header__icon img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
 }
 
 .header__icon--search{
@@ -60,7 +85,15 @@ color: #7e7e82;
     opacity:1;
 }
 
+.menu__item.active::before {
+    opacity: 1;
+    width: 5px;
+    background-color: #41f6d7; /* яркая полоска */
+}
 
+.menu__item.active {
+    color: #7e7e82;
+}
 
 .footer__icons{
    display: flex;
@@ -70,6 +103,11 @@ color: #7e7e82;
    gap: 15px;
    margin:0;
 }
+.footer__icons img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
 .footer__mail{   
 font-weight: 500;
 font-size: 16px;
