@@ -5,17 +5,27 @@ font-weight: 400;
 font-style: normal;
 }
 
-
+html,
 body {
-    width: 320px;
-    font-size: 14px;
-    font-family: "TT Lakes", sans-serif;
-    margin: 0;
-    position: relative; 
-    background-color: #fff; 
+  height: 100%;
+  margin: 0;
 }
 
-body::after {
+body {
+  font-family: "TT Lakes", sans-serif;
+  overflow: hidden; 
+}
+
+.layout {
+  height: 100vh;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  position: relative;
+}
+
+.layout::after {
     content: "";
     position: absolute;
     top: 0;
@@ -31,6 +41,10 @@ body::after {
 .footer__icon,
 .footer__lang-item {
   cursor: pointer;
+}
+
+.header {
+  flex-shrink: 0;
 }
 
 .header__icon{
@@ -50,8 +64,24 @@ body::after {
    width: 40px;
 }
 
+.menu {
+  flex: 1;                
+  overflow-y: auto;       
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+.menu {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / Edge */
+}
+
+.menu::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 .menu__list{
-  width:222px;
   padding:0;
   list-style:none;   
 }
@@ -93,6 +123,10 @@ color: #7e7e82;
 
 .menu__item.active {
     color: #7e7e82;
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 .footer__icons{
